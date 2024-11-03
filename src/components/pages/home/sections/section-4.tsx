@@ -56,27 +56,27 @@ export const Faq: React.FC = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-base text-white md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
+              Some questions asked by our community
             </p>
           </div>
         </div>
         <div className="space-y-4">
-          <Item title="The quick, brown fox jumps over a lazy dog?">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
+          <Item title="How long does my membership remain active?">
+            Membership is valid for 30 days, after which you will be
+            automatically removed from the group unless you renew.
           </Item>
-          <Item title="The first mate and his Skipper too will do?">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
+          <Item title="Can I make a payment from my Bybit or KuCoin account?">
+            Yes, you can make payments from your Bybit or KuCoin account. Just
+            ensure you select the BSC (BEP20) network and enter the correct
+            wallet address.
           </Item>
-          <Item title="Is the Space Pope reptilian!?">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
+          <Item title="Do you accept Bitcoin payments?">
+            Currently, we only accept payments in USDT or BNB to ensure fast and
+            seamless transactions.
           </Item>
-          <Item title="How much money you got on you?">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
+          <Item title="What should I do if there's an issue with my transfer?">
+            No worries! Our support team is available 24/7. Just reach out, and
+            we’ll help resolve any issues with your transfer.
           </Item>
         </div>
       </div>
