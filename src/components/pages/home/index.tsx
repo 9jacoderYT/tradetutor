@@ -1,8 +1,9 @@
 "use client";
 
+import PaymentSection from "./payment";
 import SectionOne from "./sections/section-1";
 import SectionTwo from "./sections/section-2";
-import SectionThree from "./sections/section-3";
+import { Faq } from "./sections/section-4";
 
 export default function HomeComponent() {
   return (
@@ -21,7 +22,9 @@ export default function HomeComponent() {
 
       <SectionTwo />
 
-      <SectionThree />
+      <PaymentSection />
+
+      <Faq />
     </div>
   );
 }
