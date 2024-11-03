@@ -17,6 +17,7 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
 
   if (!isMounted) return null; // Return null instead of undefined
 
+  
   return (
     <div>
       <Navbar />
