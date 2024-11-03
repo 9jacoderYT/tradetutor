@@ -1,8 +1,7 @@
 import { Barlow } from "next/font/google";
 import localFont from "next/font/local";
-import Navbar from "@/components/wrapper/navbar";
 import "./globals.css";
-import { Footer } from "@/components/wrapper/footer";
+import LayoutWrapper from "@/components/wrapper/layoutwrapper";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -36,9 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${barlow.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );

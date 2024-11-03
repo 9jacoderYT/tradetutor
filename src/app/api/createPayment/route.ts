@@ -55,10 +55,10 @@ export async function POST(request: Request): Promise<NextResponse> {
     console.log("CoinPayments response:", response.data);
     return NextResponse.json(response.data);
   } catch (error) {
-    console.error("Error creating payment:", error.message || error);
+    console.error("Error creating payment:", error);
     return NextResponse.json({
       error: "Error creating payment",
-      details: error.message,
+      details: error,
     });
   }
 }

@@ -62,7 +62,20 @@ export async function POST(request: Request) {
     const fetchedTransaction = await Moralis.EvmApi.transaction.getTransaction(
       options
     );
-    const trans = fetchedTransaction.jsonResponse;
+    if (!fetchedTransaction) {
+      throw new Error(
+        "Failed to fetch transaction data. fetchedTransaction is null or undefined."
+      );
+    }
+    const trans = (fetchedTransaction as any).jsonResponse;
+
+    if (!trans || trans.receipt_status !== "1") {
+      return NextResponse.json({
+        status: 400,
+        errorStatus: true,
+        text: "Transaction not successful or does not exist.",
+      });
+    }
 
     if (!trans || trans.receipt_status !== "1") {
       return NextResponse.json({

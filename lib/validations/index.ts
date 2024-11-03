@@ -17,39 +17,43 @@ export async function initializeMoralis(): Promise<void> {
     }
   }
 }
-
-// Function to convert scientific notation to decimal
 export const scientificToDecimal = (num: number): string => {
   const nsign = Math.sign(num);
   num = Math.abs(num);
 
-  if (/\d+\.?\d*e[\+\-]*\d+/i.test(String(num))) {
-    const zero = "0";
-    const parts = String(num).toLowerCase().split("e");
-    const e = parseInt(parts.pop() || "0", 10);
-    const l = Math.abs(e);
-    const sign = e / l;
-    const coeffArray = parts[0].split(".");
+  let result = String(num);
 
-    if (sign === -1) {
-      num =
-        l < coeffArray[0].length
-          ? coeffArray[0].slice(0, l) +
-            "." +
-            coeffArray[0].slice(l) +
-            (coeffArray[1] || "")
-          : zero +
-            "." +
-            "0".repeat(l - coeffArray[0].length) +
-            coeffArray.join("");
+  if (/\d+\.?\d*e[\+\-]*\d+/i.test(result)) {
+    const zero = "0";
+    const parts = result.toLowerCase().split("e");
+    const exponent = parseInt(parts.pop() || "0", 10);
+    const coefficient = parts[0].split(".");
+
+    if (exponent < 0) {
+      // Handle negative exponent
+      const decimalPart = coefficient[1] || "";
+      const zerosToAdd = Math.abs(exponent) - coefficient[0].length;
+      result =
+        zero +
+        "." +
+        "0".repeat(Math.max(0, zerosToAdd)) +
+        coefficient[0] +
+        decimalPart;
     } else {
-      const dec = coeffArray[1] || "";
-      num = coeffArray[0] + dec.slice(0, l) + "." + dec.slice(l);
+      // Handle positive exponent
+      const decimalPart = coefficient[1] || "";
+      const extraZeros = exponent - decimalPart.length;
+      result =
+        coefficient[0] + decimalPart + "0".repeat(Math.max(0, extraZeros));
+      if (decimalPart.length < exponent) {
+        result += "." + decimalPart.slice(exponent);
+      }
     }
   }
 
-  return nsign < 0 ? "-" + num : num;
+  return nsign < 0 ? "-" + result : result;
 };
+
 
 // Validates if a string is a valid Ethereum or BSC transaction hash
 export function isValidEthOrBscTransactionHash(txHash: string): boolean {
