@@ -22,11 +22,10 @@ export default function SectionThreeSubOne() {
             <p className="text-white">
               Generate your unique TradeTutor ID, by interacting with the
               <a
-                href="https://t.me/tradetutor01_bot"
-                target="_blank"
+                href="https://t.me/tradetutor01_bot?start=start"
                 className="text-teal-400 underline italic mx-2"
               >
-                TradeTutor Membership Bot
+                TradeTutor Membership
               </a>
               .
             </p>

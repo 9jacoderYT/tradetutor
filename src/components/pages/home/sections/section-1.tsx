@@ -39,7 +39,7 @@ export default function SectionOne() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
                   transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-                  href="https://t.me/bo_foreignexchangetrader"
+                  href="https://t.me/tradetutor01_bot?start=start"
                   target="_blank"
                   className="inline-block font-bold text-center uppercase align-middle cursor-pointer select-none px-8 text-sm leading-[50px] text-white transition-all duration-400 ease-out rounded shadow-lg bg-gradient-to-r from-[#c90075] via-[#de00ac] to-[#c90075] bg-[length:200%] bg-left hover:bg-right hover:transition-all hover:duration-500 hover:delay-100"
                 >
