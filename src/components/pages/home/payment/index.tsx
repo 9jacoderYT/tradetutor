@@ -27,7 +27,7 @@ export default function PaymentSection() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>("");
   const [success, setSuccess] = useState<boolean | null>(false);
-  const [inviteLink, setInviteLink] = useState<string>("link");
+  const [inviteLink, setInviteLink] = useState<string>("");
 
   useEffect(() => {
     const chatIdParam = searchParams.get("chatId"); // Get chatId from the query parameters
@@ -202,7 +202,7 @@ export default function PaymentSection() {
     const { idStatus } = await result.json();
 
     if (idStatus) {
-      setError("Invalid Chat ID, Follow step 1 to continue");
+      setError("Invalid Trade Tutor ID, Follow step 1 to continue");
       return;
     }
 
@@ -254,12 +254,15 @@ export default function PaymentSection() {
                 Your TradTutor ID: {chatId}
               </p>
             ) : (
-              <p className="py-3 italic text-white">Loading...</p>
+              <p className="py-3 italic text-white">
+                Please enter your TradeTutor ID to proceed
+              </p>
             )}
 
             <select
               className="w-full h-12 px-4 text-teal-700 transition duration-200 bg-white border border-transparent rounded shadow-md focus:border-teal-900 focus:outline-none"
               onChange={handleCurrencyChange}
+              disabled={chatId ? false : true}
             >
               <option defaultChecked value="null">
                 - Mode Of Payment -

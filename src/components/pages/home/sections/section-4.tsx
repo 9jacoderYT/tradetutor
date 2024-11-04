@@ -64,7 +64,7 @@ export const Faq: React.FC = () => {
               In case of extra support, please contact us via email at
               <a
                 href="mailto:freetradementorship@gmail.com"
-                className="text-teal-400"
+                className="text-teal-400 mx-2"
               >
                 freetradementorship@gmail.com
               </a>
