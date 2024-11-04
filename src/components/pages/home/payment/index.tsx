@@ -27,7 +27,7 @@ export default function PaymentSection() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>("");
   const [success, setSuccess] = useState<boolean | null>(false);
-  const [inviteLink, setInviteLink] = useState<string>("");
+  const [inviteLink, setInviteLink] = useState<string>("link");
 
   useEffect(() => {
     const chatIdParam = searchParams.get("chatId"); // Get chatId from the query parameters
@@ -342,7 +342,7 @@ export default function PaymentSection() {
             {success && (
               <>
                 <Alert severity="success">
-                  You have been sent a 24 hour invite link to the Premuim group
+                  You have been sent a 1 hour invite link to the Premium group
                   by the TradeTutor Bot.
                 </Alert>
               </>
@@ -350,6 +350,9 @@ export default function PaymentSection() {
 
             {inviteLink && (
               <>
+                <p className="text-white italic text-md">
+                  If you have not received an invite link, please use this.
+                </p>
                 <a
                   href={inviteLink}
                   className="text-teal-300 italic text-lg font-semibold underline"

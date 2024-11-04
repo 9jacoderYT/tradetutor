@@ -10,7 +10,7 @@ export default function SectionTwo() {
   const isInView = useInView(ref);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} id="about">
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
           <motion.h2
@@ -33,10 +33,10 @@ export default function SectionTwo() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : -50 }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
-            className="flex flex-col justify-between p-5 border border-[#ffc107] rounded shadow-sm"
+            className="flex flex-col justify-between p-1 md:p-5 border border-[#ffc107] rounded shadow-sm"
           >
             <div>
-              <div className="flex items-center justify-center w-16 h-16 mb-4 ">
+              <div className="flex items-center justify-center w-16 h-16 md:mb-4">
                 <Verified className="text-[#ffc107] text-3xl" />
               </div>
               <h6 className="mb-2 font-bold leading-5 text-white text-xl">
@@ -52,10 +52,10 @@ export default function SectionTwo() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 0.6 }}
-            className="flex flex-col justify-between p-5 border border-[#ffc107] rounded shadow-sm"
+            className="flex flex-col justify-between p-1 md:p-5 border border-[#ffc107] rounded shadow-sm"
           >
             <div>
-              <div className="flex items-center justify-center w-16 h-16 mb-4">
+              <div className="flex items-center justify-center w-16 h-16 md:mb-4">
                 <SupportAgent className="text-[#ffc107] text-3xl" />
               </div>
               <h6 className="mb-2 font-bold leading-5 text-white text-xl">
@@ -70,10 +70,10 @@ export default function SectionTwo() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : -50 }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 0.9 }}
-            className="flex flex-col justify-between p-5 border  border-[#ffc107] rounded shadow-sm"
+            className="flex flex-col justify-between p-1 md:p-5 border border-[#ffc107] rounded shadow-sm"
           >
             <div>
-              <div className="flex items-center justify-center w-16 h-16 mb-4 ">
+              <div className="flex items-center justify-center w-16 h-16 md:mb-4 ">
                 <SystemUpdateAltIcon className="text-[#ffc107] text-3xl" />
               </div>
               <h6 className="mb-2 font-bold leading-5 text-white text-xl">
@@ -88,10 +88,10 @@ export default function SectionTwo() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 1.2 }}
-            className="flex flex-col justify-between p-5 border  border-[#ffc107] rounded shadow-sm"
+            className="flex flex-col justify-between p-1 md:p-5 border border-[#ffc107] rounded shadow-sm"
           >
             <div>
-              <div className="flex items-center justify-center w-16 h-16 mb-4 ">
+              <div className="flex items-center justify-center w-16 h-16 md:mb-4 ">
                 <GroupsIcon className="text-[#ffc107] text-3xl" />
               </div>
               <h6 className="mb-2 font-bold leading-5 text-white text-xl">

@@ -16,8 +16,8 @@ export async function POST(request: Request) {
       throw new Error("Invalid chat ID. Chat not found.");
     }
 
-    // Calculate 24 hours from now in seconds
-    const expireDate = Math.floor(Date.now() / 1000) + 24 * 60 * 60;
+    // Calculate 1 hour from now in seconds
+    const expireDate = Math.floor(Date.now() / 1000) + 1 * 60 * 60;
 
     // Create invite link for the group
     const inviteLink = await bot.telegram.createChatInviteLink(chatId, {
@@ -29,8 +29,8 @@ export async function POST(request: Request) {
     // Send the invite link to user's private chat and verify the success of the message
     const message = await bot.telegram.sendMessage(
       userId,
-      `Welcome! Here's your group invite link: ${inviteLink.invite_link}\n` +
-        "Note: This link will expire in 24 hours and can only be used once."
+      `Hello! Here's your group invite link: ${inviteLink.invite_link}\n` +
+        "Note: This link will expire in 1 hour and can only be used once."
     );
 
     if (message) {

@@ -48,7 +48,10 @@ const Item: React.FC<ItemProps> = ({ title, children }) => {
 
 export const Faq: React.FC = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div
+      id="faq"
+      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
       <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
         <div className="flex flex-col mb-16 sm:text-center">
           <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
@@ -56,7 +59,15 @@ export const Faq: React.FC = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-base text-white md:text-lg">
-              Some questions asked by our community
+              Some questions asked by our community.
+              <br />
+              In case of extra support, please contact us via email at
+              <a
+                href="mailto:freetradementorship@gmail.com"
+                className="text-teal-400"
+              >
+                freetradementorship@gmail.com
+              </a>
             </p>
           </div>
         </div>

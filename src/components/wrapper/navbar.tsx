@@ -1,5 +1,6 @@
 "use client";
 
+import { Telegram } from "@mui/icons-material";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -13,54 +14,41 @@ const Navbar = () => {
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
                 <a
-                  href="/"
+                  href="#payment"
                   aria-label="Our product"
                   title="Our product"
                   className="font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-white hover:underline"
                 >
-                  Features
+                  Payment
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
-                  aria-label="Product pricing"
-                  title="Product pricing"
+                  href="https://t.me/bo_foreignexchangetrader"
+                  target="_blank"
+                  aria-label="support"
+                  title="support"
                   className="font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-white hover:underline"
                 >
-                  Pricing
+                  <Telegram /> Support
                 </a>
               </li>
             </ul>
             <a
               href="/"
-              aria-label="Company"
-              title="Company"
+              aria-label="TradeTutor"
+              title="TradeTutor"
               className="inline-flex items-center"
             >
-              <svg
-                className="w-8 text-teal-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
-              >
-                <rect x="3" y="1" width="7" height="12" />
-                <rect x="3" y="17" width="7" height="6" />
-                <rect x="14" y="1" width="7" height="6" />
-                <rect x="14" y="11" width="7" height="12" />
-              </svg>
+              <img src="/one.jpg" className="w-12 rounded-xl" />
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                Company
+                Trade Tutor
               </span>
             </a>
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
                 <a
-                  href="/"
+                  href="#about"
                   aria-label="About us"
                   title="About us"
                   className="font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-white hover:underline"
@@ -70,12 +58,12 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="/"
-                  aria-label="Sign in"
-                  title="Sign in"
+                  href="#faq"
+                  aria-label="FAQ"
+                  title="faq"
                   className="font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-white hover:underline"
                 >
-                  Subscribe
+                  FAQ
                 </a>
               </li>
             </ul>

@@ -22,6 +22,14 @@ export default function HomeComponent() {
 
       <SectionTwo />
 
+      <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
+        <h2 className="max-w-lg mb-6 italic text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+          TradeTutor Membership Subscription
+        </h2>
+        <p className="text-base text-white md:text-lg">
+          Please read through the steps provided, then begin the payment process
+        </p>
+      </div>
       <PaymentSection />
 
       <Faq />

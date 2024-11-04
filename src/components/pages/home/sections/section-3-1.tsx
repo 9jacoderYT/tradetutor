@@ -23,6 +23,7 @@ export default function SectionThreeSubOne() {
               Generate your unique TradeTutor ID, by interacting with the
               <a
                 href="https://t.me/tradetutor01_bot"
+                target="_blank"
                 className="text-teal-400 underline italic mx-2"
               >
                 TradeTutor Membership Bot
